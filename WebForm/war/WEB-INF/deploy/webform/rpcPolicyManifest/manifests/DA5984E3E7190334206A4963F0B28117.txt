@@ -1,0 +1,2 @@
+serviceClass: com.gherasoft.client.GreetingService
+path: 37308E83310D48F756CEC297DA1A295D.gwt.rpc

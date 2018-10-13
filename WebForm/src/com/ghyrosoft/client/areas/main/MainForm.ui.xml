@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:compose="urn:import:com.ghyrosoft.client.areas.compose"
+	xmlns:settings="urn:import:com.ghyrosoft.client.areas.settings"
+	xmlns:explore="urn:import:com.ghyrosoft.client.areas.explore" >
+	<ui:style>
+		.tabPanel {
+			min-height: 500px;
+		}
+		
+		.topContainer {
+			padding: 10px;
+		}
+		
+		.userLableStyle {
+			font-weight: bold;
+		}
+	</ui:style>
+	
+	<g:VerticalPanel width="100%" height="100%"
+		styleName="{style.topContainer}">
+		<g:Cell width="100%">
+			<g:HorizontalPanel spacing="5">
+				<g:Cell verticalAlignment="ALIGN_MIDDLE" width="">
+					<g:Label text="Logged as:" wordWrap="false" />
+				</g:Cell>
+				<g:Cell verticalAlignment="ALIGN_MIDDLE" width="100%">
+					<g:Label text="user" ui:field="userNameLabel" styleName="{style.userLableStyle}" />
+				</g:Cell>
+				<g:Cell width="" verticalAlignment="ALIGN_MIDDLE">
+					<g:Button text="Logout" ui:field="logoutButton" />
+				</g:Cell>
+			</g:HorizontalPanel>
+		</g:Cell>
+		<g:Cell width="100%" height="100%">
+			<g:TabPanel width="100%" height="100%" styleName="{style.tabPanel}"
+				ui:field="tabPanel">
+				<g:Tab text="Explore lists">
+					<explore:ExploreArea width="100%" height="100%"
+						ui:field="exploreArea" />
+				</g:Tab>
+				<g:Tab text="Compose list">
+					<compose:ComposeArea width="100%" height="100%"
+						ui:field="composeArea" />
+				</g:Tab>
+				<g:Tab text="Settings">
+					<settings:SettingsArea width="100%" height="100%" />
+				</g:Tab>
+			</g:TabPanel>
+		</g:Cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 

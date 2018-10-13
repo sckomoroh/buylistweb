@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.treeContainer
+		{
+			border-radius: 5px;
+			border: 2px solid black;
+		}
+		
+		.listNameLabel
+		{
+			font-size: 24px;
+			font-weight: bold;
+		}
+	</ui:style>
+	
+	<g:VerticalPanel width="100%" height="100%" ui:field="verticalPanel">
+		<g:Cell horizontalAlignment="ALIGN_CENTER" width="100%" height="16px">
+			<g:Label text="&lt;NONAME&gt;" height="" ui:field="listNameLabel" styleName="{style.listNameLabel}"/>
+		</g:Cell>
+		<g:Cell width="">
+			<g:HorizontalPanel width="" height="" spacing="5">
+				<g:Cell width="">
+					<g:Button text="Add category" ui:field="addCategoryButton" width=""/>
+				</g:Cell>
+				<g:Cell width="">
+					<g:Button text="Rename" ui:field="renameListButton"/>
+				</g:Cell>
+				<g:Cell width="">
+					<g:Button text="Commit" ui:field="commitButton" enabled="false"/>
+				</g:Cell>
+			<g:Button text="Clear" ui:field="clearButton"/>
+		</g:HorizontalPanel>
+		</g:Cell>
+		<g:Cell width="100%" height="100%">
+            <g:VerticalPanel width="100%" height="100%" styleName="{style.treeContainer}">
+                <g:ScrollPanel width="100%" height="100%" >
+                <g:Tree width="100%" height="100%" ui:field="composeTree"/>
+    		</g:ScrollPanel>
+        </g:VerticalPanel>
+		</g:Cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 

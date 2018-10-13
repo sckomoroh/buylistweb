@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.imageStyle
+		{
+			margin: 10px;
+		}
+		
+		.messageStyle
+		{
+			font-weight: bold;
+		}
+	</ui:style>
+	
+	<g:HorizontalPanel height="42" spacing="10">
+		<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+			<g:Image url="images/loading.gif" width="32" height="32" styleName="{style.imageStyle}">
+		</g:Image>
+		</g:Cell>
+		<g:Cell width="100%" height="100%">
+			<g:VerticalPanel width="100%" height="100%">
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+					<g:Label text="Please wait"/>
+				</g:Cell>
+				<g:Cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+					<g:Label text="Loading..." styleName="{style.messageStyle}" ui:field="messageLabel"/>
+				</g:Cell>
+		</g:VerticalPanel>
+		</g:Cell>
+	</g:HorizontalPanel>
+</ui:UiBinder> 

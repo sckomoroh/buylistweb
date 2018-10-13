@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:VerticalPanel spacing="5">
+		<g:VerticalPanel>
+			<g:CheckBox text="Send e-mail when list created"/>
+			<g:CheckBox text="Send e-mail when list updated"/>
+			<g:CheckBox text="Send e-mail when list removed"/>
+		</g:VerticalPanel>
+		<g:Cell verticalAlignment="ALIGN_BOTTOM">
+			<g:Button>Remove account</g:Button>
+		</g:Cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 
